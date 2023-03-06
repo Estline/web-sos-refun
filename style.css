@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #97d700;
+  font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.text {
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 3px 6px 6px #787878;
+}

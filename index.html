@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap" rel="stylesheet">
+    <title>SOS</title>
+</head>
+
+<body id="di2">
+    <div class="container">
+        <div class="content">
+            <div>
+                <img src="Whitelogo.png" width="220rem" />
+            </div>
+            <div class="text">
+                <h2>กำลังปรับปรุงระบบ ขออภัยในความไม่สะดวก</h2>
+            </div>
+        </div>
+    </div>
+    <script language=JavaScript>
+        /* No Highlighting */
+        function clickIE() { if (document.all) { alert(message); return false; } }
+        function clickNS(e) {
+            if
+                (document.layers || (document.getElementById && !document.all)) {
+                if (e.which == 2 || e.which == 3) { return false; }
+            }
+        }
+        if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; }
+        else { document.onmouseup = clickNS; document.oncontextmenu = clickIE; }
+        document.oncontextmenu = new Function("return false")
+
+
+        /* No Highlighting */
+        var omitformtags = ["input", "textarea", "select"];
+        omitformtags = omitformtags.join("|");
+        function disableselect(e) {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                return false
+        }
+        function reEnable() {
+            return true
+        }
+        if (typeof document.onselectstart != "undefined") {
+            document.onselectstart = new Function("return false")
+        }
+        else {
+            document.onmousedown = disableselect;
+            document.onmouseup = reEnable;
+        }
+    </script>
+</body>
+
+</html>
